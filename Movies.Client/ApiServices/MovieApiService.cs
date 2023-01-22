@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using IdentityModel.Client;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Http;
+using Microsoft.IdentityModel.Protocols.OpenIdConnect;
 using Movies.Client.Models;
 using Newtonsoft.Json;
 using System;
@@ -110,7 +113,7 @@ namespace Movies.Client.ApiServices
         {
             throw new NotImplementedException();
         }
-        /*
+        
         public async Task<UserInfoViewModel> GetUserInfo()
         {
             var idpClient = _httpClientFactory.CreateClient("IDPClient");
@@ -146,6 +149,6 @@ namespace Movies.Client.ApiServices
 
             return new UserInfoViewModel(userInfoDictionary);
         }
-        */
+        
     }
 }
